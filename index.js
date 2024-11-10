@@ -10,8 +10,7 @@ console.log(process.env.MONGODB_URI);
 // Database connection
 mongoose
   .connect(
-    (MONGODB_URI =
-      "mongodb+srv://krishiconnect:1234567890@cluster0.sce5c.mongodb.net/center?retryWrites=true&w=majority"),
+    
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
