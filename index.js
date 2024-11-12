@@ -15,6 +15,7 @@ mongoose
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      
     }
   )
   .then(() => console.log("MongoDB connected successfully"))
@@ -27,6 +28,7 @@ app.use(express.json()); // Parses incoming JSON requests
 // Routes
 app.use("/api", courseRoutes);
 app.use("/api", blogRoutes);
+app.use("/api/auth", require("./routes/auth"));
 
 // Basic route for testing
 app.get("/", (req, res) => {
